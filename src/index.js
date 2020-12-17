@@ -2,11 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Room from './Room';
 import reportWebVitals from './reportWebVitals';
+import {HashRouter, Switch, Route} from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <HashRouter>
+      <Switch>
+        <Route path='/room' component={Room} />
+        <Route path='/' component={App} />
+      </Switch>
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
